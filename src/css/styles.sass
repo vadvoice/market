@@ -26,22 +26,22 @@ body
   flex-flow: row
   margin: $margin
 .table
+  align-items: center
   display: flex
   flex-flow: column
-  justify-content: space-around
-  align-items: center
-  width: 200px
   height: 200px
+  justify-content: space-around
   margin: $margin
+  width: 200px
   +border(2px)
   +border-radius($margin)
   .prod
     +border(1px)
     padding: $padding
 .take
-  transition: all .2s
-  background: $main-color
   +border-radius($padding)
+  background: $main-color
+  transition: all .2s
 
 .check
   +border(5px)
@@ -60,3 +60,23 @@ body
   &:hover
     background: #ccc
     color: black
+.wrapItems
+  padding: 10px
+  position: relative
+  z-index: 1
+  &:after
+    background: #fff
+    border-radius: 5px
+    border: 1px solid #ddd
+    color: blue
+    content: 'check'
+    display: block
+    height: 30px
+    left: 0px
+    line-height: 30px
+    position: absolute
+    text-align: center
+    text-transform: capitalize
+    top: -25px
+    width: 100px
+    z-index: 999

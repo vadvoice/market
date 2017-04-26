@@ -147,14 +147,15 @@ function showCheck( sum, products ) {
   var checkElem = document.createElement('div');
   var maney = document.createElement('span');
   var wrapElems = document.createElement('div');
+  wrapElems.className = 'wrapItems';
   // filling
   maney.className = 'maney'
   maney.innerText = "sum: " + sum + " $";
   for (var i = 0; i < products.length; i++) {
     for (key in products[i]) {
       if (products[i].hasOwnProperty(key)) {
-        var pos = document.createElement('span');
-        // debugger
+        var pos = document.createElement('p');
+
         pos.innerText = key + ": " + products[i][key] + " ";
         wrapElems.appendChild( pos )
       }

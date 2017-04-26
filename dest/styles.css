@@ -7,13 +7,13 @@ body {
   margin: 10px; }
 
 .table {
+  align-items: center;
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 200px;
   height: 200px;
+  justify-content: space-around;
   margin: 10px;
+  width: 200px;
   -webkit-border: 2px solid #ddd;
   -moz-border: 2px solid #ddd;
   -ms-border: 2px solid #ddd;
@@ -30,12 +30,12 @@ body {
     padding: 5px; }
 
 .take {
-  transition: all .2s;
-  background: blue;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  background: blue;
+  transition: all .2s; }
 
 .check {
   -webkit-border: 5px solid #ddd;
@@ -57,3 +57,24 @@ body {
   .prod:hover {
     background: #ccc;
     color: black; }
+
+.wrapItems {
+  padding: 10px;
+  position: relative;
+  z-index: 1; }
+  .wrapItems:after {
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: blue;
+    content: 'check';
+    display: block;
+    height: 30px;
+    left: 0px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    text-transform: capitalize;
+    top: -25px;
+    width: 100px;
+    z-index: 999; }
